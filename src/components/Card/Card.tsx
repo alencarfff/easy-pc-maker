@@ -1,8 +1,15 @@
-import React, {MouseEvent, FC} from "react";
+import React, { MouseEvent, FC } from "react";
 import PropTypes from "prop-types";
-import {ICard} from "models/ICard";
+import { ICard } from "models/ICard";
 
-const Card: FC<ICard> = ({title, description, imageUrl}: ICard): JSX.Element => {
+/**
+ * Card component
+ * @param {string} title - Card title 
+ * @param {string} imageUrl - Card image url 
+ * @param {string} description - Card description 
+ * @param {string} onClick - OnClick event handler 
+ */
+const Card: FC<ICard> = ({ title, imageUrl, description, onClick }: ICard): JSX.Element => {
   function handleClick(e: MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
   }
